@@ -1,0 +1,28 @@
+void main() {
+  List<String> subjects = ["Math","English","Science"];
+    print([subjects.length]);
+    print([subjects[0]]);
+    print([subjects.last]);
+  subjects.add('Computer');
+  print(subjects);
+  
+  Map<String, int> studentScores = {
+    "Math" : 72,
+    "English" : 91,
+    "Science" : 48,
+  };
+  
+  print("StudentScores : ${studentScores["Science"]}");
+  
+  studentScores.forEach((sj,score){
+    if(sj.startsWith("a")){
+      print("$sj : $score");
+      }
+  });
+  
+  for (var i in studentScores.entries) {
+    if(i.value > 50) {
+      print("${i.key} : ${i.value}");
+    }
+  }
+}
